@@ -1,16 +1,24 @@
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart } from "../../slices/cartSlice";
 import { useGetAllProductsQuery } from "../../slices/productsApi";
-
+import { RootState } from "../..";
 import { HomeContainer, ProductContainer } from "../../styles/home.style";
 
+interface IProduct {
+  id: number | string;
+  name: string;
+  price: string;
+  description: string;
+  photo: string;
+}
+
 const Home = () => {
-  const { status } = useSelector((state) => state.products);
+  const { status } = useSelector((state: RootState) => state.products);
   const dispatch = useDispatch();
 
-  const { data } = useGetAllProductsQuery();
+  const { data } = useGetAllProductsQuery("");
 
-  const handleAddToCart = (product) => {
+  const handleAddToCart = (product: IProduct) => {
     dispatch(addToCart(product));
   };
 
@@ -20,7 +28,7 @@ const Home = () => {
         <>
           <ul className="productsList">
             {data &&
-              data.products?.map((product) => (
+              data.products?.map((product: IProduct) => (
                 <ProductContainer key={product.id} className="product">
                   <img
                     src={product.photo}
