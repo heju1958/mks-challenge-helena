@@ -4,7 +4,7 @@ export const CartContainer = styled.div`
   background: #0f52ba;
   position: fixed;
   right: 0;
-  width: 20rem;
+  width: 21rem;
   height: 100vh;
   box-shadow: -5px 0px 6px rgba(0, 0, 0, 0.13);
 
@@ -77,8 +77,8 @@ export const CartContainer = styled.div`
   .buy {
     position: fixed;
     bottom: 0;
-    margin-bottom: 2rem;
-    width: 20rem;
+    margin-bottom: 0;
+    width: 21rem;
     height: 5rem;
     background: black;
     color: white;
@@ -113,9 +113,9 @@ export const CartEmpty = styled.div`
 
 export const CartTotal = styled.div`
   position: fixed;
-  gap: 9rem;
+  gap: 11rem;
   bottom: 0;
-  margin-bottom: 7rem;
+  margin-bottom: 5rem;
   color: white;
   display: flex;
   padding: 1rem;
