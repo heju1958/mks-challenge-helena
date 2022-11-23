@@ -14,7 +14,6 @@ export const HeaderContainer = styled.div`
     display: flex;
     gap: 0.4rem;
     margin: 1rem;
-
     .MKS {
       font-weight: 500;
       font-size: 2rem;
@@ -24,7 +23,6 @@ export const HeaderContainer = styled.div`
       margin-top: 0.8rem;
     }
   }
-
   .cartQuantity {
     margin: 1rem;
     border: none;
