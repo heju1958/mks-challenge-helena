@@ -11,6 +11,8 @@ import { productsApi } from "./slices/productsApi";
 import cartReducer from "./slices/cartSlice";
 import openCartReducer from "./slices/openCartSlice";
 
+export type RootState = ReturnType<typeof store.getState>;
+
 const store = configureStore({
   reducer: {
     products: productsReducer,
@@ -23,8 +25,6 @@ const store = configureStore({
 });
 
 store.dispatch(productsFetch());
-
-export type RootState = ReturnType<typeof store.getState>;
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
