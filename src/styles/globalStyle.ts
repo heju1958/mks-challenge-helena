@@ -45,6 +45,9 @@ const GlobalStyle = createGlobalStyle`
     font-size: 1rem;
     color: var(--grey-4);
   }
+  button:hover{
+    cursor: pointer;
+  }
 `;
 
 export default GlobalStyle;

@@ -1,6 +1,8 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
+import { RootState } from "../..";
+
 import {
   addToCart,
   decreaseCart,
@@ -17,21 +19,29 @@ import {
   CartTotal,
 } from "../../styles/cart.style";
 
+export interface ICartItem {
+  id: number | string;
+  photo: string;
+  name: string;
+  price: number;
+  cartQuantity: number;
+}
+
 const Cart = () => {
-  const cart = useSelector((state) => state.cart);
+  const cart = useSelector((state: RootState) => state.cart);
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(getTotals());
+    dispatch(getTotals(""));
   }, [cart, dispatch]);
 
-  const handleAddToCart = (product) => {
+  const handleAddToCart = (product: ICartItem) => {
     dispatch(addToCart(product));
   };
-  const handleDecreaseCart = (product) => {
+  const handleDecreaseCart = (product: ICartItem) => {
     dispatch(decreaseCart(product));
   };
-  const handleRemoveFromCart = (product) => {
+  const handleRemoveFromCart = (product: ICartItem) => {
     dispatch(removeFromCart(product));
   };
 
@@ -39,7 +49,7 @@ const Cart = () => {
     <CartContainer>
       <CartTitle>
         <p>Carrinho de Compras</p>{" "}
-        <button onClick={() => dispatch(closeCart())}>x</button>
+        <button onClick={() => dispatch(closeCart(""))}>x</button>
       </CartTitle>
       {cart.cartItems.length === 0 ? (
         <CartEmpty>
@@ -48,7 +58,7 @@ const Cart = () => {
       ) : (
         <ul>
           {cart.cartItems &&
-            cart.cartItems.map((cartItem) => (
+            cart.cartItems.map((cartItem: ICartItem) => (
               <li key={cartItem.id}>
                 <div className="cartProduct">
                   <img src={cartItem.photo} alt={cartItem.name} />
@@ -56,7 +66,7 @@ const Cart = () => {
                     <p>{cartItem.name}</p>
                   </div>
                 </div>
-                  <p className="qtd">Qtd.</p>
+                <p className="qtd">Qtd.</p>
                 <div className="cartProductQuantity">
                   <button onClick={() => handleDecreaseCart(cartItem)}>
                     -
@@ -67,7 +77,10 @@ const Cart = () => {
                 <div className="cartProductPrice">
                   R${cartItem.price * cartItem.cartQuantity}
                 </div>
-                <button onClick={() => handleRemoveFromCart(cartItem)} className="btnRemove">
+                <button
+                  onClick={() => handleRemoveFromCart(cartItem)}
+                  className="btnRemove"
+                >
                   x
                 </button>
               </li>

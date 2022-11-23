@@ -4,7 +4,7 @@ import { useGetAllProductsQuery } from "../../slices/productsApi";
 import { RootState } from "../..";
 import { HomeContainer, ProductContainer } from "../../styles/home.style";
 
-interface IProduct {
+export interface IProduct {
   id: number | string;
   name: string;
   price: string;
