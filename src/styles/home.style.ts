@@ -9,12 +9,21 @@ export const HomeContainer = styled.div`
     gap: 1.2rem;
     padding: 2rem;
     align-items: stretch;
+
+    @media (min-width: 1600px) {
+      height: 37.5vw;
+    }
   }
+
+    @media (max-width: 1400px) {
+      overflow-y: scroll;
+    }
 `;
 
 export const ProductContainer = styled.li`
   background: #ffffff;
   width: 13rem;
+  height: 20rem;
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.135216);
   border-radius: 0.6rem;
 
