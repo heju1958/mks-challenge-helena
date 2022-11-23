@@ -24,7 +24,11 @@ const store = configureStore({
 
 store.dispatch(productsFetch());
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
+export type RootState = ReturnType<typeof store.getState>;
+
+const root = ReactDOM.createRoot(
+  document.getElementById("root") as HTMLElement
+);
 root.render(
   <React.StrictMode>
     <Provider store={store}>
