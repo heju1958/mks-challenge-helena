@@ -15,9 +15,9 @@ export const HomeContainer = styled.div`
     }
   }
 
-    @media (max-width: 1400px) {
-      overflow-y: scroll;
-    }
+  @media (max-width: 1400px) {
+    overflow-y: scroll;
+  }
 `;
 
 export const ProductContainer = styled.li`
@@ -38,7 +38,7 @@ export const ProductContainer = styled.li`
   }
 
   .productimg {
-    width: 9rem;
+    width: 10.7rem;
     object-fit: cover;
     padding: 1rem;
   }
