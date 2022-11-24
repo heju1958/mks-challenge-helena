@@ -11,7 +11,6 @@ import { productsApi } from "./slices/productsApi";
 import cartReducer from "./slices/cartSlice";
 import openCartReducer from "./slices/openCartSlice";
 
-export type RootState = ReturnType<typeof store.getState>;
 
 const store = configureStore({
   reducer: {
@@ -23,6 +22,8 @@ const store = configureStore({
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware().concat(productsApi.middleware),
 });
+
+export type RootState = ReturnType<typeof store.getState>;
 
 store.dispatch(productsFetch());
 

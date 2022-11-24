@@ -1,5 +1,6 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
+import { RootState } from "..";
 
 const initialState = {
   items: [],
@@ -16,21 +17,26 @@ export const productsFetch = createAsyncThunk(
   }
 );
 
+interface IState {
+  items: never[] | undefined;
+  status: string | null;
+}
+
 const productsSlice = createSlice({
   name: "products",
   initialState,
   reducers: {},
-  extraReducers: {
-    [productsFetch.pending]: (state, action) => {
+  extraReducers: (builder) => {
+    builder.addCase(productsFetch.pending, (state: IState, action) => {
       state.status = "pending";
-    },
-    [productsFetch.fulfilled]: (state, action) => {
-      state.items = action.payload;
-      state.status = "success";
-    },
-    [productsFetch.rejected]: (state, action) => {
+    }),
+      builder.addCase(productsFetch.fulfilled, (state: IState, action) => {
+        state.items = action.payload;
+        state.status = "success";
+      });
+    builder.addCase(productsFetch.rejected, (state: IState, action) => {
       state.status = "rejected";
-    },
+    });
   },
 });
 
