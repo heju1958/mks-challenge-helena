@@ -26,11 +26,15 @@ export const ProductContainer = styled.li`
   height: 20rem;
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.135216);
   border-radius: 0.6rem;
-
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
+
+  :hover {
+    transform: scale(0.9);
+    transition: 0.7s;
+  }
 
   .productInfo {
     display: flex;
