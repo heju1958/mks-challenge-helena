@@ -1,5 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit";
-
 import { ICartItem, IItem, ICartTotal } from "../interfaces/interfaces";
 
 const initialState = {
@@ -18,7 +17,6 @@ const cartSlice = createSlice({
       const existingIndex = state.cartItems.findIndex(
         (item: IItem) => item.id === action.payload.id
       );
-
       if (existingIndex >= 0) {
         state.cartItems[existingIndex] = {
           ...state.cartItems[existingIndex],
@@ -35,7 +33,6 @@ const cartSlice = createSlice({
       const itemIndex = state.cartItems.findIndex(
         (item: IItem) => item.id === action.payload.id
       );
-
       if (state.cartItems[itemIndex].cartQuantity > 1) {
         state.cartItems[itemIndex].cartQuantity -= 1;
       } else if (state.cartItems[itemIndex].cartQuantity === 1) {
@@ -65,10 +62,8 @@ const cartSlice = createSlice({
         (cartTotal: ICartTotal, cartItem: ICartItem) => {
           const { price, cartQuantity } = cartItem;
           const itemTotal = price * cartQuantity;
-
           cartTotal.total += itemTotal;
           cartTotal.quantity += cartQuantity;
-
           return cartTotal;
         },
         {

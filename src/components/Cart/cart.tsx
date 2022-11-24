@@ -1,7 +1,9 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-
 import { RootState } from "../..";
+import { closeCart } from "../../slices/openCartSlice";
+import { CartContainer, CartTitle, CartEmpty, CartTotal } from "./cart.style";
+import { ICartItem } from "../../interfaces/interfaces";
 
 import {
   addToCart,
@@ -9,12 +11,6 @@ import {
   getTotals,
   removeFromCart,
 } from "../../slices/cartSlice";
-
-import { closeCart } from "../../slices/openCartSlice";
-
-import { CartContainer, CartTitle, CartEmpty, CartTotal } from "./cart.style";
-
-import { ICartItem } from "../../interfaces/interfaces";
 
 const Cart = () => {
   const cart = useSelector((state: RootState) => state.cart);
