@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart } from "../../slices/cartSlice";
-import { useGetAllProductsQuery } from "../../slices/productsApi";
+import { useGetAllProductsQuery } from "../../services/productsApi";
 import { HomeContainer, ProductContainer } from "./home.style";
 import { RootState } from "../..";
 import { IProduct } from "../../interfaces/interfaces";
