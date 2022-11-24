@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { openCart } from "../../slices/openCartSlice";
-import { HeaderContainer } from "../../styles/header.style";
+import { HeaderContainer } from "./header.style";
 import { RootState } from "../..";
 
 const Header = () => {

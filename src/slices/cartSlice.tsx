@@ -1,10 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-import {
-  ICartItem,
-  IItem,
-  ICartTotal,
-} from "../components/interfaces/interfaces";
+import { ICartItem, IItem, ICartTotal } from "../interfaces/interfaces";
 
 const initialState = {
   cartItems: localStorage.getItem("cartItems")

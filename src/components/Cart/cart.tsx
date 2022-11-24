@@ -12,14 +12,9 @@ import {
 
 import { closeCart } from "../../slices/openCartSlice";
 
-import {
-  CartContainer,
-  CartTitle,
-  CartEmpty,
-  CartTotal,
-} from "../../styles/cart.style";
+import { CartContainer, CartTitle, CartEmpty, CartTotal } from "./cart.style";
 
-import { ICartItem } from "../interfaces/interfaces";
+import { ICartItem } from "../../interfaces/interfaces";
 
 const Cart = () => {
   const cart = useSelector((state: RootState) => state.cart);

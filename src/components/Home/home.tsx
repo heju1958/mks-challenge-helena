@@ -1,9 +1,9 @@
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart } from "../../slices/cartSlice";
 import { useGetAllProductsQuery } from "../../slices/productsApi";
-import { HomeContainer, ProductContainer } from "../../styles/home.style";
+import { HomeContainer, ProductContainer } from "./home.style";
 import { RootState } from "../..";
-import { IProduct } from "../interfaces/interfaces";
+import { IProduct } from "../../interfaces/interfaces";
 
 const Home = () => {
   const { status } = useSelector((state: RootState) => state.products);

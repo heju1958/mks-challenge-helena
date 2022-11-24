@@ -1,6 +1,6 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
-import { IState } from "../components/interfaces/interfaces";
+import { IState } from "../interfaces/interfaces";
 
 const initialState = {
   items: [],
