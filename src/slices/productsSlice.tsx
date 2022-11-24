@@ -1,6 +1,6 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
-import { RootState } from "..";
+import { IState } from "../components/interfaces/interfaces";
 
 const initialState = {
   items: [],
@@ -16,11 +16,6 @@ export const productsFetch = createAsyncThunk(
     return response?.data;
   }
 );
-
-interface IState {
-  items: never[] | undefined;
-  status: string | null;
-}
 
 const productsSlice = createSlice({
   name: "products",

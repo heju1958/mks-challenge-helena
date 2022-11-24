@@ -1,5 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { ICartItem } from "../components/Cart/cart";
+
+import {
+  ICartItem,
+  IItem,
+  ICartTotal,
+} from "../components/interfaces/interfaces";
 
 const initialState = {
   cartItems: localStorage.getItem("cartItems")
@@ -8,15 +13,6 @@ const initialState = {
   cartTotalQuantity: 0,
   cartTotalAmount: 0,
 };
-
-export interface IItem {
-  id: number | string;
-}
-
-export interface ICartTotal {
-  total: number;
-  quantity: number;
-}
 
 const cartSlice = createSlice({
   name: "cart",

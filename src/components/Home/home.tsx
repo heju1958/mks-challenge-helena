@@ -1,16 +1,9 @@
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart } from "../../slices/cartSlice";
 import { useGetAllProductsQuery } from "../../slices/productsApi";
-import { RootState } from "../..";
 import { HomeContainer, ProductContainer } from "../../styles/home.style";
-
-export interface IProduct {
-  id: number | string;
-  name: string;
-  price: string;
-  description: string;
-  photo: string;
-}
+import { RootState } from "../..";
+import { IProduct } from "../interfaces/interfaces";
 
 const Home = () => {
   const { status } = useSelector((state: RootState) => state.products);

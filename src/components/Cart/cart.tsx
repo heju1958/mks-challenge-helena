@@ -19,13 +19,7 @@ import {
   CartTotal,
 } from "../../styles/cart.style";
 
-export interface ICartItem {
-  id: number | string;
-  photo: string;
-  name: string;
-  price: number;
-  cartQuantity: number;
-}
+import { ICartItem } from "../interfaces/interfaces";
 
 const Cart = () => {
   const cart = useSelector((state: RootState) => state.cart);
