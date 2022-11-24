@@ -5,6 +5,7 @@ import { HomeContainer, ProductContainer } from "./home.style";
 import { RootState } from "../..";
 import { IProduct } from "../../interfaces/interfaces";
 import ShopBag from "../../assets/shoppingBag.png";
+import { openCart } from "../../slices/openCartSlice";
 
 const Home = () => {
   const { status } = useSelector((state: RootState) => state.products);
@@ -33,7 +34,11 @@ const Home = () => {
                       <span className="price">R${product.price}</span>
                     </div>
                     <p className="description">{product.description}</p>
-                    <button onClick={() => handleAddToCart(product)}>
+                    <button
+                      onClick={() =>
+                        dispatch(openCart(handleAddToCart(product)))
+                      }
+                    >
                       <img src={ShopBag} alt="shoppingBag" />
                       COMPRAR
                     </button>
