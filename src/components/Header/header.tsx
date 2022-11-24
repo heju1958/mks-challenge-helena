@@ -2,6 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { openCart } from "../../slices/openCartSlice";
 import { HeaderContainer } from "./header.style";
 import { RootState } from "../..";
+import CartIcon from "../../assets/cart.png";
 
 const Header = () => {
   const dispatch = useDispatch();
@@ -17,8 +18,7 @@ const Header = () => {
         className="cartQuantity"
         onClick={() => dispatch(openCart({ payload }))}
       >
-        <img src="../cart.png" alt="cartIcon" />{" "}
-        <span>{cartTotalQuantity}</span>
+        <img src={CartIcon} alt="cartIcon" /> <span>{cartTotalQuantity}</span>
       </button>
     </HeaderContainer>
   );

@@ -4,13 +4,12 @@ import { useGetAllProductsQuery } from "../../slices/productsApi";
 import { HomeContainer, ProductContainer } from "./home.style";
 import { RootState } from "../..";
 import { IProduct } from "../../interfaces/interfaces";
+import ShopBag from "../../assets/shoppingBag.png";
 
 const Home = () => {
   const { status } = useSelector((state: RootState) => state.products);
   const dispatch = useDispatch();
-
   const { data } = useGetAllProductsQuery("");
-
   const handleAddToCart = (product: IProduct) => {
     dispatch(addToCart(product));
   };
@@ -35,7 +34,7 @@ const Home = () => {
                     </div>
                     <p className="description">{product.description}</p>
                     <button onClick={() => handleAddToCart(product)}>
-                      <img src="../shoppingbag.png" alt="cartIcon" />
+                      <img src={ShopBag} alt="shoppingBag" />
                       COMPRAR
                     </button>
                   </div>
