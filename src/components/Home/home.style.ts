@@ -32,7 +32,7 @@ export const ProductContainer = styled.li`
   justify-content: flex-end;
 
   :hover {
-    transform: scale(0.9);
+    transform: scale(1.07);
     transition: 0.7s;
   }
 
