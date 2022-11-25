@@ -4,7 +4,7 @@
 
 import { describe, expect, test } from "@jest/globals";
 import { screen, render } from "@testing-library/react";
-import Footer from "../components/Footer/footer";
+import Footer from "../../components/Footer/footer";
 
 describe("Footer Render", () => {
   test("Show footer in screen", () => {
