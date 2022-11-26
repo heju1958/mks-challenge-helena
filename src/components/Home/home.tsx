@@ -6,6 +6,7 @@ import { RootState } from "../..";
 import { IProduct } from "../../interfaces/interfaces";
 import ShopBag from "../../assets/shoppingBag.png";
 import { openCart } from "../../slices/openCartSlice";
+import Shimmer from "../Shimmer/shimmer";
 
 const Home = () => {
   const { status } = useSelector((state: RootState) => state.products);
@@ -48,7 +49,7 @@ const Home = () => {
           </ul>
         </>
       ) : status === "pending" ? (
-        <p>Loading...</p>
+        <Shimmer />
       ) : (
         <p>Unexpected error occured...</p>
       )}
