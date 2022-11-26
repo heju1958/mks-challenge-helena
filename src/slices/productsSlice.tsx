@@ -1,3 +1,5 @@
+/* eslint-disable rule-name */
+
 import axios from "axios";
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { IState } from "../interfaces/interfaces";
