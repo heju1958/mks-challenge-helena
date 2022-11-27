@@ -7,6 +7,7 @@ import { IState } from "../interfaces/interfaces";
 const initialState = {
   items: [],
   status: null,
+  error: null,
 };
 
 export const productsFetch = createAsyncThunk(
