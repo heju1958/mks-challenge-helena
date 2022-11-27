@@ -17,7 +17,7 @@ describe("Footer Render", () => {
   });
 });
 
-describe("Div render in shimmer", () => {
+describe("Div render in footer", () => {
   test("to be a div", () => {
     const { baseElement } = render(<div />);
     expect(baseElement).toBe(document.body);
