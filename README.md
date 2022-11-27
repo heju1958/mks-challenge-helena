@@ -2,7 +2,7 @@
 
 #
 
-### `yarn test`
+### `yarn test --verbose`
 
 **para rodar o Jest**
 
@@ -22,7 +22,7 @@ https://mks-frontend-challenge-api.herokuapp.com/api-docs/
   <li>Redux toolkit</li>
   <li>Styled-components</li>
   <li>Framer-motion</li>
-  <li>Jest*</li>
+  <li>Jest</li>
 </ol>
 
 #
