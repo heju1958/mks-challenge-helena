@@ -10,7 +10,7 @@ export const HomeContainer = styled.div`
     padding: 2rem;
 
     @media (min-width: 1300px) {
-      padding: 3rem;
+      padding: 4.5rem;
       margin-top: 0;
     }
 
@@ -66,6 +66,7 @@ export const ProductContainer = styled.li`
     align-items: center;
     justify-content: space-between;
     gap: 1rem;
+    margin: 0.5rem;
     p {
       font-size: 1.1rem;
     }

@@ -1,18 +1,25 @@
 import styled from "styled-components";
 
 export const CartContainer = styled.div`
-
-  background: #0F52BA;
+  background: #0f52ba;
   position: fixed;
   right: 0;
   width: 24rem;
-  height: 100vh;
+  height: 100%;
   box-shadow: -5px 0px 6px rgba(0, 0, 0, 0.13);
 
+  ul {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: 35rem;
+  }
+
+  @media (max-width: 400px) {
+    width: 20rem;
+  }
+
   .btnRemove {
-    position: fixed;
-    right: 2.5rem;
-    margin-bottom: 4rem;
+    margin-bottom: 4.3rem;
     font-size: 0.8rem;
     width: 1rem;
     height: 1rem;
@@ -22,10 +29,10 @@ export const CartContainer = styled.div`
     border-radius: 50%;
   }
 
-  li {
+  .cardContainer {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     background: #ffffff;
     box-shadow: -2px 2px 10px rgba(0, 0, 0, 0.05);
@@ -35,11 +42,14 @@ export const CartContainer = styled.div`
     width: 80%;
     margin-left: 8.5%;
 
+    .containerQuantity {
+      display: flex;
+      flex-direction: column;
+    }
+
     .qtd {
       font-size: 0.5rem;
-      position: fixed;
-      margin-bottom: 2rem;
-      margin-left: 2.8rem;
+      margin: 0.2rem;
     }
 
     .cartProductPrice {
@@ -48,12 +58,13 @@ export const CartContainer = styled.div`
     }
 
     .cartProductQuantity {
-      padding: 0.2rem;
       border-radius: 4px;
       border: 0.3px solid #bfbfbf;
       display: flex;
       gap: 0.7rem;
       font-size: 0.6rem;
+      opacity: 0.6;
+
       button {
         border: none;
         background: none;
@@ -65,6 +76,7 @@ export const CartContainer = styled.div`
       display: flex;
       align-items: center;
       gap: 1rem;
+      margin: 0.5rem;
 
       p {
         font-size: 0.7rem;
@@ -77,6 +89,7 @@ export const CartContainer = styled.div`
       object-fit: cover;
     }
   }
+
   .buy {
     position: fixed;
     bottom: 0;
@@ -87,6 +100,10 @@ export const CartContainer = styled.div`
     color: white;
     font-size: 1.3rem;
     font-weight: 700;
+
+    @media (max-width: 400px) {
+      width: 20rem;
+    }
   }
 `;
 
@@ -95,13 +112,15 @@ export const CartTitle = styled.div`
   color: white;
   display: flex;
   justify-content: space-between;
-  padding: 2rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
 
-  p{
+  p {
     font-size: 1.3rem;
     margin-left: 1rem;
-    width: 8rem;
+    width: 11rem;
     font-weight: 700;
+    padding: 1.2rem;
   }
 
   button {
@@ -111,6 +130,7 @@ export const CartTitle = styled.div`
     background: black;
     color: white;
     border-radius: 50%;
+    margin: 1rem;
   }
 `;
 
@@ -132,4 +152,8 @@ export const CartTotal = styled.div`
   padding: 2rem;
   font-size: 1.3rem;
   font-weight: bold;
+
+  @media (max-width: 400px) {
+    gap: 7rem;
+  }
 `;

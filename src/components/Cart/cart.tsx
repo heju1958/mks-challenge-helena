@@ -14,7 +14,6 @@ import {
 } from "../../slices/cartSlice";
 
 const Cart = () => {
-  
   const cart = useSelector((state: RootState) => state.cart);
   const dispatch = useDispatch();
 
@@ -51,20 +50,24 @@ const Cart = () => {
           <ul>
             {cart.cartItems &&
               cart.cartItems.map((cartItem: ICartItem) => (
-                <li key={cartItem.id}>
+                <li key={cartItem.id} className="cardContainer">
                   <div className="cartProduct">
                     <img src={cartItem.photo} alt={cartItem.name} />
                     <div className="CartProductInfo">
                       <p>{cartItem.name}</p>
                     </div>
                   </div>
-                  <p className="qtd">Qtd.</p>
-                  <div className="cartProductQuantity">
-                    <button onClick={() => handleDecreaseCart(cartItem)}>
-                      -
-                    </button>
-                    <div className="count">{cartItem.cartQuantity}</div>
-                    <button onClick={() => handleAddToCart(cartItem)}>+</button>
+                  <div className="containerQuantity">
+                    <p className="qtd">Qtd.</p>
+                    <div className="cartProductQuantity">
+                      <button onClick={() => handleDecreaseCart(cartItem)}>
+                        -
+                      </button>
+                      <div className="count">{cartItem.cartQuantity}</div>
+                      <button onClick={() => handleAddToCart(cartItem)}>
+                        +
+                      </button>
+                    </div>
                   </div>
                   <div className="cartProductPrice">
                     R${cartItem.price * cartItem.cartQuantity}

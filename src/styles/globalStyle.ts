@@ -20,8 +20,8 @@ const GlobalStyle = createGlobalStyle`
     font: inherit;
     vertical-align: baseline;
   }
-  body {
-    background-color: var(--grey-0);
+  *::-webkit-scrollbar {
+    width: 0.5rem;
   }
   ol,
   ul {
@@ -44,10 +44,12 @@ const GlobalStyle = createGlobalStyle`
     font-weight: 400;
     font-size: 1rem;
     color: var(--grey-4);
+    background-color: var(--grey-0);
   }
   button:hover{
     cursor: pointer;
   }
+  
 `;
 
 export default GlobalStyle;
