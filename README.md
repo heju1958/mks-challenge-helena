@@ -1,5 +1,5 @@
 <h1 align = "center">
-	MKS frontend challenge Helena 
+	MKS Sistemas challenge
 </h1>
 
 `Comando para executar os testes:`
