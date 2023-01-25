@@ -1,16 +1,17 @@
 import styled from "styled-components";
 
 export const CartContainer = styled.div`
-  background: #0f52ba;
+
+  background: #0F52BA;
   position: fixed;
   right: 0;
-  width: 21rem;
+  width: 24rem;
   height: 100vh;
   box-shadow: -5px 0px 6px rgba(0, 0, 0, 0.13);
 
   .btnRemove {
     position: fixed;
-    right: 0.5rem;
+    right: 2.5rem;
     margin-bottom: 4rem;
     font-size: 0.8rem;
     width: 1rem;
@@ -29,8 +30,10 @@ export const CartContainer = styled.div`
     background: #ffffff;
     box-shadow: -2px 2px 10px rgba(0, 0, 0, 0.05);
     border-radius: 8px;
+    height: 4.5rem;
     margin: 1rem;
-    padding: 0.5rem;
+    width: 80%;
+    margin-left: 8.5%;
 
     .qtd {
       font-size: 0.5rem;
@@ -78,25 +81,32 @@ export const CartContainer = styled.div`
     position: fixed;
     bottom: 0;
     margin-bottom: 0;
-    width: 21rem;
+    width: 24rem;
     height: 5rem;
     background: black;
     color: white;
     font-size: 1.3rem;
+    font-weight: 700;
   }
 `;
 
 export const CartTitle = styled.div`
   background: #0f52ba;
   color: white;
-  padding: 1.3rem;
-  font-size: 1.3rem;
   display: flex;
   justify-content: space-between;
+  padding: 2rem;
+
+  p{
+    font-size: 1.3rem;
+    margin-left: 1rem;
+    width: 8rem;
+    font-weight: 700;
+  }
 
   button {
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 1.8rem;
+    height: 1.8rem;
     border: none;
     background: black;
     color: white;
@@ -109,6 +119,7 @@ export const CartEmpty = styled.div`
   display: flex;
   justify-content: center;
   margin-top: 10rem;
+  font-size: 1.2rem;
 `;
 
 export const CartTotal = styled.div`
@@ -118,6 +129,7 @@ export const CartTotal = styled.div`
   margin-bottom: 5rem;
   color: white;
   display: flex;
-  padding: 1rem;
+  padding: 2rem;
   font-size: 1.3rem;
+  font-weight: bold;
 `;

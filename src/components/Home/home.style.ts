@@ -9,15 +9,25 @@ export const HomeContainer = styled.div`
     gap: 1.4rem;
     padding: 2rem;
 
-    @media (max-width: 1000px) {
-      background-color: aqua;
+    @media (min-width: 1300px) {
+      padding: 3rem;
+      margin-top: 0;
+    }
+
+    @media (min-width: 1500px) {
+      padding: 4.3rem;
+      margin-top: 3rem;
+    }
+
+    @media (max-width: 1200px) {
+      margin-top: 0;
       grid-template-columns: 1fr 1fr 0fr;
     }
 
     @media (max-width: 700px) {
+      margin-top: 0;
       overflow-y: scroll;
       justify-items: center;
-      background-color: aqua;
       grid-template-columns: 1fr;
     }
   }
@@ -26,7 +36,7 @@ export const HomeContainer = styled.div`
 export const ProductContainer = styled.li`
   background: #ffffff;
   width: 14rem;
-  height: 20rem;
+  height: 19rem;
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.135216);
   border-radius: 0.6rem;
   display: flex;
@@ -45,9 +55,9 @@ export const ProductContainer = styled.li`
   }
 
   .productimg {
-    width: 12rem;
+    width: 9rem;
+    height: 9rem;
     object-fit: cover;
-    padding: 1rem;
   }
 
   .productData {
@@ -57,7 +67,7 @@ export const ProductContainer = styled.li`
     justify-content: space-between;
     gap: 1rem;
     p {
-      font-size: 1rem;
+      font-size: 1.1rem;
     }
     .price {
       font-size: 1rem;
@@ -70,7 +80,7 @@ export const ProductContainer = styled.li`
   }
 
   .description {
-    font-size: 0.7rem;
+    font-size: 0.6rem;
     color: #2c2c2c;
     padding: 0.5rem;
   }

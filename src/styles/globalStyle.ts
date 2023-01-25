@@ -38,7 +38,7 @@ const GlobalStyle = createGlobalStyle`
   textarea,
   select,
   ::placeholder {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Montserrat', sans-serif;
   }
   body {
     font-weight: 400;

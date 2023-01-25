@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const HeaderContainer = styled.div`
-  background: #0f52ba;
+  background: #0F52BA;
   height: 5rem;
   display: flex;
   gap: 20rem;
@@ -17,14 +17,13 @@ export const HeaderContainer = styled.div`
     display: flex;
     gap: 0.4rem;
     .MKS {
-      font-weight: 500;
+      font-weight: 600;
       font-size: 2rem;
     }
     .sistemas {
-      margin-top: 0.8rem;
-      font-stretch: semi-expanded;
-      font-family: Arial Narrow, sans-serif;
-      opacity: 0.6;
+      margin-top: 1.2rem;
+      font-weight: 300;
+      line-height: 80%;
     }
   }
   .cartQuantity {
