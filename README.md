@@ -23,7 +23,7 @@ yarn test --verbose
 
 `API`
 
-### [`API Rest de produtos`](https://mks-frontend-challenge-api.herokuapp.com/api-docs/)
+### [`API Rest de produtos`](https://mks-challenge-api-frontend.herokuapp.com/api-docs/)
 
 <h2 align = "center">
 	Tecnologias
